@@ -2,8 +2,10 @@ import streamlit as st
 import google.generativeai as genai
 
 # 1. API 키 설정
-MY_KEY = "AIzaSyCUvCwL48Lt8iNkUHvM4y3c9Wrt91sGlJ0" # 여기에 실제 키 입력
-genai.configure(api_key=MY_KEY)
+# 기존 하드코딩된 키 대신 Streamlit의 보안 기능(secrets)을 사용합니다.
+import streamlit as st
+MY_KEY = st.secrets["GEMINI_API_KEY"]
+genai.configure(api_key=AIzaSyD5-qV7A-_SO0XzSFvbV7JVM_T7xIWFInI)
 
 # 2. 시스템에 맞는 모델 자동 찾기 (핵심 로직)
 @st.cache_resource # 모델 설정을 매번 하지 않도록 캐싱
