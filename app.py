@@ -27,7 +27,7 @@ def get_working_model():
 
 # [UI] 웹 화면 구성
 st.set_page_config(page_title="제휴마케팅 카피 자동화 시스템", page_icon="🍪")
-st.title("🍪잘 팔리게 만드는 온라인 제품 카피 생성기")
+st.title("🍪잘 팔리게 만드는 '온라인 제품' 카피 생성기")
 
 st.markdown("---") # 구분선
 
@@ -63,3 +63,4 @@ if st.button("전문 마케터의 카피 생성 ✨"):
                     st.error(f"오류가 발생했습니다: {e}")
     else:
         st.warning("제품 정보와 특징을 입력해 주세요!")
+
