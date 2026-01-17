@@ -5,7 +5,7 @@ import google.generativeai as genai
 # 기존 하드코딩된 키 대신 Streamlit의 보안 기능(secrets)을 사용합니다.
 import streamlit as st
 MY_KEY = st.secrets["GEMINI_API_KEY"]
-genai.configure(api_key=AIzaSyD5-qV7A-_SO0XzSFvbV7JVM_T7xIWFInI)
+genai.configure(api_key=MY_KEY)
 
 # 2. 시스템에 맞는 모델 자동 찾기 (핵심 로직)
 @st.cache_resource # 모델 설정을 매번 하지 않도록 캐싱
@@ -54,4 +54,5 @@ if st.button("전문 마케터의 카피 생성 ✨"):
             except Exception as e:
                 st.error(f"최종 오류 발생: {e}")
     else:
+
         st.warning("제품 이름과 특징을 모두 입력해 주세요!")
